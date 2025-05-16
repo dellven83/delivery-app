@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+# 📦 DeliveryApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**DeliveryApp** is a cross-platform mobile app built with React Native and Expo for package delivery optimization.  
+Designed specifically for postal workers, this app enables you to:
 
-## Get started
+- 📷 Scan package barcodes  
+- 🗺️ Automatically pin delivery locations on a map  
+- 🔢 Show number of packages per stop  
+- 🚗 Optimize delivery routes visually *(coming soon)*
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Features
 
-2. Start the app
+- **Barcode Scanning** — Quickly scan packages using the device camera  
+- **Map Integration** — See all delivery stops pinned on an interactive map  
+- **Package Count** — Know how many packages go to each address  
+- **Bottom Tab Navigation** — Clean navigation between Home, Map, and Scanner screens  
+- **Built with Expo Router** — Easy file-based routing with Expo's modern routing system  
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 📱 Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerequisites
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js + npm  
+- Expo CLI  
+- Xcode *(for iOS simulator)*  
+- Android Studio *(for Android simulator or device testing)*  
 
-## Get a fresh project
-
-When you're ready, run:
+### Installation
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/dellven83/delivery-app.git
+cd delivery-app
+npm install
+npx expo start
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+### license
 
-To learn more about developing your project with Expo, look at the following resources:
+Copyright (c) 2025 Dellven
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+All rights reserved.
 
-## Join the community
+This source code and design may not be copied, modified, published, or distributed without express written permission from the author.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Unauthorized use is strictly prohibited.
