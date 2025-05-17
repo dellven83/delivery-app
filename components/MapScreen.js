@@ -2,32 +2,18 @@ import * as Location from 'expo-location';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-
-const dummyPackages = [
-  {
-    id: '1',
-    address: '123 Main St, City, State',
-    latitude: 37.78825,
-    longitude: -122.4324,
-    count: 3,
-  },
-  {
-    id: '2',
-    address: '456 Side St, City, State',
-    latitude: 37.78925,
-    longitude: -122.435,
-    count: 1,
-  },
-];
+import { usePackages } from '../context/PackageContext';
 
 export default function MapScreen() {
   const [region, setRegion] = useState(null);
+  const { packages } = usePackages();
 
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        return alert('Permission to access location was denied');
+        alert('Permission to access location was denied');
+        return;
       }
 
       let location = await Location.getCurrentPositionAsync({});
@@ -45,11 +31,11 @@ export default function MapScreen() {
   return (
     <View style={styles.container}>
       <MapView style={styles.map} region={region} showsUserLocation={true}>
-        {dummyPackages.map((pkg) => (
+        {packages.map((pkg, index) => (
           <Marker
-            key={pkg.id}
+            key={index}
             coordinate={{ latitude: pkg.latitude, longitude: pkg.longitude }}
-            title={pkg.address}
+            title={`Stop #${index + 1}`}
             description={`${pkg.count} package(s)`}
           >
             <View style={styles.marker}>
